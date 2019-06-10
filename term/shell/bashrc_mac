@@ -1,0 +1,87 @@
+# /etc/skel/.bashrc
+#
+# This file is sourced by all *interactive* bash shells on startup,
+# including some apparently interactive shells such as scp and rcp
+# that can't tolerate any output.  So make sure this doesn't display
+# anything or bad things will happen !
+
+
+# Test for an interactive shell.  There is no need to set anything
+# past this point for scp and rcp, and it's important to refrain from
+# outputting anything in those cases.
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+if [[ "$TERM" == *rxvt* ]]; then
+	exec zsh
+fi
+
+# Put your fun stuff here.
+# Export settings
+export EDITOR="vim"
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+# User specific aliases and functions
+#PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w \[\e[31m\]$\[\e[0m\] "
+#PS1="\[\e[32m\]\u\[\e[31m\]@\[\e[32m\]\h\[\e[31m\]:\[\e[33m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \[\e[31m\]$\[\e[0m\] "
+
+## Alias
+alias ls='ls'
+alias la='ls -alh'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+## Vim stuff
+alias v='vim'
+alias vV='vim ~/.vimrc'
+
+## Zsh Stuff
+alias vZ='vim ~/.zshrc'
+alias nvZ='nvim ~/.zshrc'
+alias Z='source ~/.zshrc'
+
+## Bash Stuff
+alias vB='vim ~/.bashrc'
+alias vP='vim ~/.bash_profile'
+
+## Config Stuff
+alias vwI='vim ~/.weechat/irc.conf'
+alias vW='vim ~/.weechat/weechat.conf'
+alias vsC='vim ~/.ssh/config'
+alias vsK='vim ~/.ssh/known_hosts'
+
+## MISC
+alias cls='clear'
+alias externalip='sh ~/bin/externalip.sh'
+alias starwars='telnet towel.blinkenlights.nl'
+alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
+alias sshvnc='ssh -fNR 8888:localhost:5901 chrs@home.sanerds.net'
+alias sshtunnel='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
+alias tor='ssh -L 8080:localhost:8080 odin'
+
+### Dev Stuff
+## Git Stuff
+alias cdG='cd ~/GitHub'
+
+## Exit terminal
+alias k='exit'
+
+## Apps
+alias reloadV='source ~/.vimrc'
+alias reloadB='source ~/.bashrc'
+alias irc='weechat-curses'
+alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
+alias tor='ssh -L 8080:localhost:8080 odin'
+
+## Tmux
+alias t='tmux'
+alias tn='tmux new -s'
+alias ta='tmux a -t'
