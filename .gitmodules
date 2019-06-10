@@ -121,3 +121,12 @@
 [submodule "vim/.vim/pack/bundle/opt/vcs-jump"]
 	path = vim/.vim/pack/bundle/opt/vcs-jump
 	url = https://github.com/wincent/vcs-jump.git
+[submodule "vim/.vim/pack/bundle/opt/vim-javascript"]
+	path = vim/.vim/pack/bundle/opt/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/.vim/pack/bundle/opt/vim-lion"]
+	path = vim/.vim/pack/bundle/opt/vim-lion
+	url = https://github.com/tommcdo/vim-lion.git
+[submodule "vim/.vim/pack/bundle/opt/vim-soy"]
+	path = vim/.vim/pack/bundle/opt/vim-soy
+	url = https://github.com/duganchen/vim-soy.git
