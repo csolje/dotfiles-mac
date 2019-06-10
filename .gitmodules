@@ -118,3 +118,6 @@
 [submodule "vim/.vim/pack/bundle/opt/neco-ghc"]
 	path = vim/.vim/pack/bundle/opt/neco-ghc
 	url = https://github.com/eagletmt/neco-ghc.git
+[submodule "vim/.vim/pack/bundle/opt/vcs-jump"]
+	path = vim/.vim/pack/bundle/opt/vcs-jump
+	url = https://github.com/wincent/vcs-jump.git

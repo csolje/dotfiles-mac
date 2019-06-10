@@ -12,7 +12,7 @@
 ~H
 # Command Line History (newest to oldest):
 :wq
-|2,0,1560198481,,"wq"
+|2,0,1560198758,,"wq"
 
 # Search String History (newest to oldest):
 
@@ -25,10 +25,3 @@
 # Registers:
 
 # History of marks within files (newest to oldest):
-
-> ~/.tmux.conf
-	*	1560198480	0
-	"	64	0
-	^	64	1
-	.	64	0
-	+	64	0
