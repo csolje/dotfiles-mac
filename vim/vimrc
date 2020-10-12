@@ -36,7 +36,7 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tweekmonster/gofmt.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
@@ -45,10 +45,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'stsewd/fzf-checkout.vim'
-"Plug 'vuciv/vim-bujo'
 Plug 'tpope/vim-dispatch'
 Plug '/home/mpaulson/personal/vim-apm'
-"Plug 'theprimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'vim-airline/vim-airline'
 Plug 'gruvbox-community/gruvbox'
 
