@@ -1,23 +1,14 @@
-# {{{ ZSH Color and settings
+export ZSH="/Users/chso02/.oh-my-zsh"
 
-# Path to your oh-my-zsh installation.
-export ZSH=/Users/csolje/.oh-my-zsh
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-#ZSH_THEME="powerline"
-#ZSH_THEME="minimal"
-#ZSH_THEME="Lambda"
-#ZSH_THEME="norm"
-#ZSH_THEME="simple"
-#ZSH_THEME="fletcherm"
-ZSH_THEME="lambda-gitster"
-#ZSH_THEME="node"
-#ZSH_THEME="af-magic"
+#ZSH_THEME="3den"
+ZSH_THEME="Soliah"
 
-#POWERLINE_RIGHT_A="date"
-#POWERLINE_RIGHT_A="exit-status"
-#POWERLINE_FULL_CURRENT_PATH="true"
-#POWERLINE_SHOW_GIT_ON_RIGHT="true"
+POWERLINE_RIGHT_A="date"
+POWERLINE_RIGHT_A="exit-status"
+POWERLINE_FULL_CURRENT_PATH="true"
+POWERLINE_SHOW_GIT_ON_RIGHT="true"
 POWERLINE_DETECT_SSH="true"
 POWERLINE_DATE_FORMAT="%D{%d-%m}"
 POWERLINE_HIDE_HOST_NAME="true"
@@ -40,7 +31,7 @@ zstyle ':completion:*' menu select=1
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' special-dirs true
-zstyle :compinstall filename '/Users/csolje/.zshrc'
+zstyle :compinstall filename '/Users/chso02/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -61,7 +52,7 @@ DISABLE_AUTO_UPDATE="true"
 COMPLETION_WAITING_DOTS="true"
 
 # }}}
- 
+
 # {{{ User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${PATH}"
@@ -110,23 +101,15 @@ alias eV='nvim ~/.config/nvim/init.vim'
 alias vZ='vim ~/.zshrc'
 alias nvZ='nvim ~/.zshrc'
 alias Z='source ~/.zshrc'
+## Bash stuff
+alias vB='vim ~/.bashrc'
 
 ## X Resources Stuff
 alias vX='vim ~/.Xresources'
 alias vxI='vim ~/.xinitrc'
-alias nvX='nvim ~/.Xresources'
-alias nvxI='nvim ~/.xinitrc'
 alias XTR='xrdb -merge ~/.Xresources'
 
 ## Config Stuff
-alias vxI='vim ~/.xinitrc'
-alias vxM='vim ~/.xmonad/xmonad.hs'
-alias vO='vim ~/.config/openbox/rc.xml'
-alias voA='vim ~/.config/openbox/autostart.sh'
-alias vwI='vim ~/.weechat/irc.conf'
-alias vW='vim ~/.weechat/weechat.conf'
-alias vi3C='vim ~/.config/i3/config'
-alias vB='vim ~/.bashrc'
 alias vT='vim ~/.tmux.conf'
 
 ## MISC
@@ -138,58 +121,12 @@ alias weather='curl wttr.in'
 
 ### {{{ Dev Stuff
 ## Git Stuff
-alias cdG='cd ~/GitHub'
-alias cdC='cd ~/GitHub/configfiles'
-alias cdD='cd ~/GitHub/dotfiles'
-alias cdPp='cd ~/GitHub/Pluralsight_Courses'
-alias cdPsh='cd ~/GitHub/PowerShell_Scripts'
-alias cdDs='cd ~/GitHub/datascience'
 alias vgG='vim ~/.gitconfig'
 alias vgC='vim ~/.gitconfig'
-
-## Golang stuff
-alias cdGol='cd ~/go/src/github.com/LinuxDistroCommunity'
-alias cdGo='cd ~/go/src/github.com'
-
-## Dev Env
-alias cdDev='cd ~/GitHub/DevEnv'
-
-## VSTS Stuff
-alias cdV='cd ~/va-solutions'
-alias cdVb='cd ~/va-solutions/BI'
-alias cdVp='cd ~/va-solutions/PowerApps'
-
-# }}}
 
 ## {{{ Shutdown and exit terminal
 alias Shutdown='sudo shutdown -h now'
 alias k=exit
-
-# }}}
-
-## {{{ Xbps
-alias xbps='sudo xbps-install -S'
-alias xbps-s='sudo xbps-query -Rs'
-alias xbps-sync='sudo xbps-install -Suv'
-
-# }}}
-
-## {{{ Gentoo
-alias HowLong='genlop -t'
-alias OneShot='emerge --oneshot portage'
-alias I='time emerge -av'
-alias S='emerge -s'
-alias sync='time emerge --sync'
-alias Uworld='time emerge --ask --verbose --update --newuse --deep @world'
-alias Uworld-bdeps='time emerge --ask --newuse --update --deep --with-bdeps=y @world'
-alias Esync='eix-sync'
-alias Eupdate='eix --update'
-alias cdP='cd /etc/portage && sudo su'
-alias cdU='cd /etc/portage/package.use && sudo su'
-alias cdB='cd /etc/portage/package.mask && sudo su'
-alias cdK='cd /etc/portage/package.accept_keywords && sudo su'
-alias vM='sudo vim /etc/portage/make.conf'
-alias eM='sudo nvim /etc/portage/make.conf'
 
 # }}}
 
@@ -235,23 +172,9 @@ alias tor='ssh -L 8080:localhost:8080 odin'
 
 # }}}
 
-## {{{ News and Music
-alias MP='ncmpcpp'
-alias news='newsbeuter'
-alias M='mpv'
- 
-# }}}
-
 ## {{{ Tmux
 alias t='tmux new -s'
 alias ta='tmux a -t'
-
-# }}}
-
-## {{{ Remote Desktop
-alias ssi="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@ssi.ad"
-alias ssin="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:chrs@ssi.ad /v:STD003281.ssi.ad &"
-alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_chrs@sst.dk"
 
 # }}}
 
@@ -259,8 +182,8 @@ alias sst="xfreerdp /cert-ignore -grab-keyboard /sec:rdp /size:1920x1080 /u:adm_
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux vi-mode themes tmux osx iterm2 zsh-completions color-command)
-source /Users/csolje/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugins=(git archlinux vi-mode themes tmux osx iterm2 colorize fzf compleat)
+source /Users/chso02/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/sbin:$PATH"
 
@@ -276,3 +199,4 @@ if [ -f '/Users/csolje/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/cso
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/csolje/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/csolje/google-cloud-sdk/completion.zsh.inc'; fi
 export HOMEBREW_GITHUB_API_TOKEN=d0069dbf9f1288cc1659087079c4e8da89560777
+
