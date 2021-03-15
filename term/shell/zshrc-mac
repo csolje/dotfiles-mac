@@ -63,7 +63,7 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # Export settings
-export EDITOR="vim"
+export EDITOR="nvim"
 export PAGER="less"
 export BROWSER="qutebrowser"
 export BROWSERCLI="w3m"
@@ -92,14 +92,16 @@ alias cp='cp -i'
 alias mv='mv -i'
 
 ## Vim stuff
+alias vi='nvim'
+alias vim='nvim'
 alias v='vim'
-alias vV='vim ~/.vimrc'
-alias e='nvim'
-alias eV='nvim ~/.config/nvim/init.vim'
+#alias vV='vim ~/.vimrc'
+alias vV='nvim ~/.config/nvim/init.vim'
+#alias e='nvim'
+#alias eV='nvim ~/.config/nvim/init.vim'
 
 ## Zsh Stuff
 alias vZ='vim ~/.zshrc'
-alias nvZ='nvim ~/.zshrc'
 alias Z='source ~/.zshrc'
 ## Bash stuff
 alias vB='vim ~/.bashrc'
@@ -113,9 +115,6 @@ alias XTR='xrdb -merge ~/.Xresources'
 alias vT='vim ~/.tmux.conf'
 
 ## MISC
-alias cdA='cd ~/.config/awesome'
-alias cdO='cd ~/.config/openbox'
-alias cdI='cd ~/.config/i3'
 alias cls='clear'
 alias weather='curl wttr.in'
 
@@ -123,6 +122,8 @@ alias weather='curl wttr.in'
 ## Git Stuff
 alias vgG='vim ~/.gitconfig'
 alias vgC='vim ~/.gitconfig'
+alias cdc='cd ~/code'
+alias cdg='cd ~/GitHub'
 
 ## {{{ Shutdown and exit terminal
 alias Shutdown='sudo shutdown -h now'
@@ -131,22 +132,10 @@ alias k=exit
 # }}}
 
 ## {{{ Net
-alias NM='sudo /etc/init.d/NetworkManager restart'
 alias externalip='sh ~/bin/externalip.sh'
 
 # }}}
 
-## {{{ Pacman
-alias Y='yaourt'
-alias pac='sudo pacman -S'
-alias pac-r='sudo pacman -R'
-alias pac-s='sudo pacman -Ss'
-alias Update='sudo pacman -Syu --force'
-alias Sync='sudo pacman -Syy'
-alias pacLog='tail -f /var/log/pacman.log'
-alias Unlock='sudo rm /var/lib/pacman/db.lck'
-
-# }}}
 
 ## {{{ SSH stuff
 alias vsC='vim ~/.ssh/config'
@@ -192,11 +181,6 @@ export PATH="/usr/local/sbin:$PATH"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/csolje/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/csolje/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/csolje/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/csolje/google-cloud-sdk/completion.zsh.inc'; fi
 export HOMEBREW_GITHUB_API_TOKEN=d0069dbf9f1288cc1659087079c4e8da89560777
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
