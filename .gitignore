@@ -3,6 +3,7 @@
 .config/nvim/bundle/*
 .config/nvim/plugged/*
 .config/nvim/after/*
+.config/nvim/autoload/*
 vim/.vim/tmp/*
 vim/.vim/sessions/*
 bin/terraform
