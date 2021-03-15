@@ -1,6 +1,8 @@
 .DS_Store
 .config/nvim/tmp/*
 .config/nvim/bundle/*
+.config/nvim/plugged/*
+.config/nvim/after/*
 vim/.vim/tmp/*
 vim/.vim/sessions/*
 bin/terraform
