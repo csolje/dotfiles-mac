@@ -1,4 +1,4 @@
-export ZSH="/Users/chso02/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
@@ -31,7 +31,7 @@ zstyle ':completion:*' menu select=1
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
 zstyle ':completion:*' special-dirs true
-zstyle :compinstall filename '/Users/chso02/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -171,8 +171,7 @@ alias ta='tmux a -t'
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git archlinux vi-mode themes tmux osx iterm2 colorize fzf compleat)
-source /Users/chso02/GitHub/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+plugins=(git vi-mode themes tmux osx iterm2 colorize fzf compleat zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 export PATH="/usr/local/sbin:$PATH"
 
@@ -181,6 +180,6 @@ export PATH="/usr/local/sbin:$PATH"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export HOMEBREW_GITHUB_API_TOKEN=d0069dbf9f1288cc1659087079c4e8da89560777
+export HOMEBREW_GITHUB_API_TOKEN=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
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
