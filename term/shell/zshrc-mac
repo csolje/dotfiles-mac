@@ -97,19 +97,12 @@ alias vim='nvim'
 alias v='vim'
 #alias vV='vim ~/.vimrc'
 alias vV='nvim ~/.config/nvim/init.vim'
-#alias e='nvim'
-#alias eV='nvim ~/.config/nvim/init.vim'
 
 ## Zsh Stuff
 alias vZ='vim ~/.zshrc'
-alias Z='source ~/.zshrc'
+alias reloadZ='source ~/.zshrc'
 ## Bash stuff
 alias vB='vim ~/.bashrc'
-
-## X Resources Stuff
-alias vX='vim ~/.Xresources'
-alias vxI='vim ~/.xinitrc'
-alias XTR='xrdb -merge ~/.Xresources'
 
 ## Config Stuff
 alias vT='vim ~/.tmux.conf'
@@ -118,56 +111,37 @@ alias vT='vim ~/.tmux.conf'
 alias cls='clear'
 alias weather='curl wttr.in'
 
-### {{{ Dev Stuff
+### Dev Stuff
 ## Git Stuff
-alias vgG='vim ~/.gitconfig'
 alias vgC='vim ~/.gitconfig'
 alias cdc='cd ~/code'
 alias cdg='cd ~/GitHub'
 
-## {{{ Shutdown and exit terminal
-alias Shutdown='sudo shutdown -h now'
+## Exit terminal
 alias k=exit
 
-# }}}
-
-## {{{ Net
+## Net
 alias externalip='sh ~/bin/externalip.sh'
 
-# }}}
-
-
-## {{{ SSH stuff
+## SSH stuff
 alias vsC='vim ~/.ssh/config'
 alias vsK='vim ~/.ssh/known_hosts'
 
-# }}}
-
-## {{{ MISC
+## MISC
 alias starwars='telnet towel.blinkenlights.nl'
 alias ryper='ssh -fNR 7777:localhost:22 tunnel@ryper.org'
 alias sshvnc='ssh -fNR 8000:localhost:5901 chrs@home.sanerds.net'
 alias sshtunnel='ssh -fNR 7777:localhost:22 tunnel@haxus.org'
 alias tor='ssh -L 8080:localhost:8080 odin'
 
-# }}}
-
-## {{{ Apps
-alias reloadV='source ~/.vimrc'
-alias reloadZ='source ~/.zshrc'
+## Apps
 alias irc='weechat-curses'
 alias startkvm='wakeonlan 44:1e:a1:3b:78:66'
 alias tor='ssh -L 8080:localhost:8080 odin'
 
-# }}}
-
-## {{{ Tmux
+## Tmux
 alias t='tmux new -s'
 alias ta='tmux a -t'
-
-# }}}
-
-# }}}
 
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
@@ -180,6 +154,6 @@ export PATH="/usr/local/sbin:$PATH"
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
-export HOMEBREW_GITHUB_API_TOKEN=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
+export HOMEBREW_GITHUB_API_TOKEN=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
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
